@@ -1,4 +1,4 @@
-version: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: device-registry-deployment
@@ -18,7 +18,7 @@ spec:
         ports:
           - containerPort: 5000
 ---
-version: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: mongo-deployment
@@ -38,7 +38,7 @@ spec:
         ports:
           - containerPort: 27017
 ---
-version: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: redis-deployment

@@ -24,4 +24,3 @@ spec:
   type: LoadBalancer
   selector:
     flask: api
----
