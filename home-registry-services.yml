@@ -4,6 +4,9 @@ metadata:
   name: mongo-service
 spec:
   type: ClusterIP
+  ports:
+    - port: 5000
+      targetPort: 5000
   selector:
     mongo: nosql
 ---
@@ -13,6 +16,9 @@ metadata:
   name: redis-service
 spec:
   type: ClusterIP
+  ports:
+    - port: 6379
+      targetPort: 6379
   selector:
     redis: cache
 ---
@@ -22,5 +28,8 @@ metadata:
   name: loadbalancer
 spec:
   type: LoadBalancer
+  ports:
+    - port: 27017
+      targetPort: 27017
   selector:
     flask: api
